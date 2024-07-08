@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "Soundex.h"
  
-TEST(SoundexTest, BasicTest) {
+TEST(SoundexTest,SoundexTest_BasicTest) {
     EXPECT_EQ(generateSoundex("Singh"), "S520");
     EXPECT_EQ(generateSoundex("Kumar"), "K560");
     EXPECT_EQ(generateSoundex("Sharma"), "S650");
@@ -9,26 +9,25 @@ TEST(SoundexTest, BasicTest) {
     EXPECT_EQ(generateSoundex("Gupta"), "G130");
 }
  
-TEST(SoundexTest, EdgeCases) {
+TEST(SoundexTest,SoundexTest_EdgeCases) {
     EXPECT_EQ(generateSoundex("Chand"), "C530");
     EXPECT_EQ(generateSoundex("Mehra"), "M600");
     EXPECT_EQ(generateSoundex("Pandey"), "P530");
     EXPECT_EQ(generateSoundex(""), "");
 }
  
-TEST(SoundexTest, CaseInsensitive) {
+TEST(SoundexTest,SoundexTest_CaseInsensitive) {
     EXPECT_EQ(generateSoundex("SINGH"), "S520");
     EXPECT_EQ(generateSoundex("kUmAr"), "K560");
     EXPECT_EQ(generateSoundex("shARmA"), "S650");
 }
  
-TEST(SoundexTest, SingleCharacterName) {
+TEST(SoundexTest,SoundexTest_SingleCharacterName) {
     EXPECT_EQ(generateSoundex("A"), "A000");
     EXPECT_EQ(generateSoundex("B"), "B000");
 }
  
-TEST(SoundexTest, AllVowels) {
+TEST(SoundexTest,SoundexTest_AllVowels) {
     EXPECT_EQ(generateSoundex("Aeio"), "A000");
     EXPECT_EQ(generateSoundex("Euio"), "E000");
 }
-
