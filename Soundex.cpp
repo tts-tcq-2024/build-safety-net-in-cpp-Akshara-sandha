@@ -17,7 +17,7 @@ char getSoundexCode(char c) {
  
 char fetch_firstchar(const std::string& name) {
     if (name.empty()) return '\0';
-    return toupper(name[0]);
+    //return toupper(name[0]);
 }
  
 void appendSoundex(std::string& soundex, char code, char& prevCode) {
